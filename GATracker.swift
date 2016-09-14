@@ -28,9 +28,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 }
 
 
-private var _analyticsTracker: GATracker!
-
-class GATracker {
+public class GATracker {
     
     public static let sharedInstance: GATracker = GATracker(tid: "")
     
@@ -52,7 +50,7 @@ class GATracker {
     var ul : String
     
     //Set up singleton object for the tracker
-    class func setup(_ tid: String) -> GATracker {
+    public class func setup(_ tid: String) -> GATracker {
         GATracker.sharedInstance.tid = tid
         return GATracker.sharedInstance
     }
