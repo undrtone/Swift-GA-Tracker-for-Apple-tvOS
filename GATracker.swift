@@ -127,7 +127,7 @@ public class GATracker {
         }
     }
     
-    func screenView(_ screenName: String, customParameters: Dictionary<String, String>?) {
+    public func screenView(_ screenName: String, customParameters: Dictionary<String, String>?) {
         /*
             A screenview hit, use screenname
         */
@@ -140,7 +140,7 @@ public class GATracker {
         self.send("screenview", params: params)
     }
     
-    func event(_ category: String, action: String, label: String?, customParameters: Dictionary<String, String>?) {
+    public func event(_ category: String, action: String, label: String?, customParameters: Dictionary<String, String>?) {
         var label = label
         /*
             An event hit with category, action, label
@@ -159,7 +159,7 @@ public class GATracker {
         self.send("event", params: params)
     }
     
-    func exception(_ description: String, isFatal:Bool, customParameters: Dictionary<String, String>?) {
+    public func exception(_ description: String, isFatal:Bool, customParameters: Dictionary<String, String>?) {
         /*
             An exception hit with exception description (exd) and "fatality"  (Crashed or not) (exf)
         */
